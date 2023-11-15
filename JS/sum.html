@@ -35,16 +35,28 @@
                 var c = a*b
                 document.getElementById('result').value = c 
             }
-        </script>
-        <form name="Addition Of two elements">
+            function validate()
+            {
+                if(document.addition.var1.value == "")
+                {
+                    alert("Please give an element1")
+                }
+                if(document.addition.var2.value == "")
+                {
+                    alert("Please give an element2")
+                }
+            }
+            //JS actions onblur, onchange, onsubmit, onclick, onfocus, onmouseover, ...
+        </script> 
+        <form name="addition" onsubmit="validate()">
             <input type="text" name="element1" id="var1" value="">
             <br><br>
             <input type="text" name="element2" id="var2" value="">
             <br><br>
-            <input type="button" name="add" value="add" onclick="sum()">
-            <input type="button" name="sub" value="sub" onclick="minus()">
-            <input type="button" name="mult" value="mult" onclick="multiply()">
-            <br> <br>
+            <input type="submit" name="add" value="add" onclick="sum()">
+            <input type="submit" name="sub" value="sub" onclick="minus()">
+            <input type="submit" name="mult" value="mult" onclick="multiply()">
+            <br><br>
             Result IS <input type="text" name="result" id="result" value="">
             </form>
     </body>
